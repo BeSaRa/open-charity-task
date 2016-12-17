@@ -1,2 +1,2 @@
 # open-charity-task
-this repo for open charity HTML task
+the new repo for task
