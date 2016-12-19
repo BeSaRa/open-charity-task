@@ -1,7 +1,14 @@
 @import "theme";
+@import "fonts";
 @import "mixins";
+
+@include generateHFontSize;
 * {
   @include boxing-size;
+}
+body {
+  font-family: $font-family;
+  font-size:$body-font-size;
 }
 .clear {
   clear: both;
@@ -12,21 +19,48 @@
   width:100%;
   padding:0 15px;
 }
+.section {
+  display: block;
+}
+/**************** body with some helper class *********/
+body.has-scroll {
+  #header {
+    background-color: $white !important;
+    height:70px;
+    padding:0;
+  }
+  #primary-menu {
+    a {
+      color: $gray;
+    }
+  }
+  #logo {
+    max-width:200px;
+    margin-top: 13px;
+  }
+}
+
 /**************** header ********/
 #header {
   padding:15px 0;
   height:96px;
-  position: relative;
+  position: fixed;
   z-index:2;
+  width:100%;
+  @include transition(all .2s ease-in-out);
 }
 .responsive-image {
   max-width: 100%;
+  height: auto;
 }
 #logo {
   float: left;
+  max-width: 300px;
+  @include transition(all .2s ease-in-out);
 }
 #primary-menu {
   float: right;
+  font-size:$font-size-14;
   ul {
     padding:0;
     float: left;
@@ -36,7 +70,7 @@
       list-style: none;
       a {
         text-decoration: none;
-        color: $gray;
+        color: $white;
         text-transform: uppercase;
         float: left;
         padding:10px 15px;
@@ -51,30 +85,38 @@
 /*********** slider **************/
 #slider {
   height:100vh;
-  background: url("../images/slide-image.png") no-repeat scroll center 96px;
+  background: url("../images/slide-image.png") no-repeat scroll center top;
   background-size:cover;
-  margin-top:-96px;
   .slider-content {
     clear: both;
     text-align: center;
     width:60%;
     margin: 200px auto;
+    line-height:1.4;
     * {
        color: $white;
      }
   }
   width:100%;
-  float: left;
+  overflow: hidden;
 }
 
 /******** buttons *************/
 .btn {
   padding:10px 20px;
   border:1px solid $blue;
-  color: $blue !important;
   &.reverse {
     border:1px solid $white;
-    color: $white !important;
-    background-color: $blue;
   }
+}
+
+/*********** generic styles ********/
+.upper-case {
+  text-transform: uppercase !important;
+}
+.capital-case {
+  text-transform: capitalize !important;
+}
+.lower-case {
+  text-transform: lowercase !important;
 }

@@ -1,3 +1,5 @@
+/******** don't remove or edit the below code *********/
+/*****************************************************/
 body {
   background-color: #f1f2f5;
 }
@@ -30,10 +32,58 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f1f2f5;
 }
 
+.btn {
+  color: #5fc0c3 !important;
+}
+
+.btn.reverse {
+  color: #ffffff !important;
+  background-color: #5fc0c3;
+}
+
+@font-face {
+  font-family: "Museo";
+  src: url("../fonts/Museo-Sans/1b4cd06b44538d529084b3599f708643.eot");
+  /* IE9*/
+  src: url("../fonts/Museo-Sans/1b4cd06b44538d529084b3599f708643.eot?#iefix") format("embedded-opentype"), url("../fonts/Museo-Sans/1b4cd06b44538d529084b3599f708643.woff2") format("woff2"), url("../fonts/Museo-Sans/1b4cd06b44538d529084b3599f708643.woff") format("woff"), url("../fonts/Museo-Sans/1b4cd06b44538d529084b3599f708643.ttf") format("truetype"), url("../fonts/Museo-Sans/1b4cd06b44538d529084b3599f708643.svg#Museo Sans W01 Rounded 300") format("svg");
+  /* iOS 4.1- */
+}
+
+/******** don't remove or edit the below code *********/
+/*****************************************************/
+h1, .h1 {
+  font-size: 40px;
+}
+
+h2, .h2 {
+  font-size: 35px;
+}
+
+h3, .h3 {
+  font-size: 32px;
+}
+
+h4, .h4 {
+  font-size: 29px;
+}
+
+h5, .h5 {
+  font-size: 24px;
+}
+
+h6, .h6 {
+  font-size: 21px;
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Museo";
+  font-size: 17pt;
 }
 
 .clear {
@@ -47,24 +97,52 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 15px;
 }
 
+.section {
+  display: block;
+}
+
+/**************** body with some helper class *********/
+body.has-scroll #header {
+  background-color: #ffffff !important;
+  height: 70px;
+  padding: 0;
+}
+
+body.has-scroll #primary-menu a {
+  color: #565659;
+}
+
+body.has-scroll #logo {
+  max-width: 200px;
+  margin-top: 13px;
+}
+
 /**************** header ********/
 #header {
   padding: 15px 0;
   height: 96px;
-  position: relative;
+  position: fixed;
   z-index: 2;
+  width: 100%;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .responsive-image {
   max-width: 100%;
+  height: auto;
 }
 
 #logo {
   float: left;
+  max-width: 300px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 #primary-menu {
   float: right;
+  font-size: 14pt;
 }
 
 #primary-menu ul {
@@ -80,7 +158,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #primary-menu ul li a {
   text-decoration: none;
-  color: #565659;
+  color: #ffffff;
   text-transform: uppercase;
   float: left;
   padding: 10px 15px;
@@ -93,11 +171,10 @@ h1, h2, h3, h4, h5, h6 {
 /*********** slider **************/
 #slider {
   height: 100vh;
-  background: url("../images/slide-image.png") no-repeat scroll center 96px;
+  background: url("../images/slide-image.png") no-repeat scroll center top;
   background-size: cover;
-  margin-top: -96px;
   width: 100%;
-  float: left;
+  overflow: hidden;
 }
 
 #slider .slider-content {
@@ -105,6 +182,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   width: 60%;
   margin: 200px auto;
+  line-height: 1.4;
 }
 
 #slider .slider-content * {
@@ -115,13 +193,23 @@ h1, h2, h3, h4, h5, h6 {
 .btn {
   padding: 10px 20px;
   border: 1px solid #5fc0c3;
-  color: #5fc0c3 !important;
 }
 
 .btn.reverse {
   border: 1px solid #ffffff;
-  color: #ffffff !important;
-  background-color: #5fc0c3;
+}
+
+/*********** generic styles ********/
+.upper-case {
+  text-transform: uppercase !important;
+}
+
+.capital-case {
+  text-transform: capitalize !important;
+}
+
+.lower-case {
+  text-transform: lowercase !important;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -38,3 +38,11 @@ $bg-colors : (
     background-color: $color;
   }
 }
+
+.btn {
+  color: $blue !important;
+  &.reverse {
+    color: $white !important;
+    background-color: $blue;
+  }
+}

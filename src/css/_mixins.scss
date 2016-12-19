@@ -1,6 +1,16 @@
 @import "variabls";
 
 
+@mixin generateHFontSize($font-head:$font-head) {
+  @each $item in $font-head {
+    $h : nth($item,1);
+    $size : nth($item,2);
+    #{$h} , .#{$h}{
+      font-size: $size;
+    }
+  }
+}
+
 
 @mixin boxing-size($style : $boxing-style){
   -webkit-box-sizing: $style;
@@ -44,4 +54,9 @@
   @each $point in $points  {
     @include generateMedia($point);
   }
+}
+
+@mixin transition($value){
+  -webkit-transition: $value;
+  transition: $value;
 }

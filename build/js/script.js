@@ -1,2 +1,2 @@
-
+"use strict";!function(){function a(){var a=this;a.bodyClass=[],a.classObject={hasScroll:"has-scroll"},a.removeBodyClass=function(b){var c=a.bodyClass.indexOf(b);c!=-1&&a.bodyClass.splice(c,1)&&$("body").removeClass(b)},a.addBodyClass=function(b){a.bodyClass.indexOf(b)==-1&&a.bodyClass.push(b)?$("body").addClass(b):null},a.changeNav=function(b){var c=a.classObject.hasScroll;b&&a.bodyClass.indexOf(c)==-1&&a.addBodyClass(c),b||a.bodyClass.indexOf(c)==-1||a.removeBodyClass(c)},a.checkNav=function(){var b=window.scrollY;b>0?a.changeNav(!0):a.changeNav(!1)},a.init=function(){$(window).on("resize scroll",a.checkNav)}}(new a).init()}();
 //# sourceMappingURL=script.js.map

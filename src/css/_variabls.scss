@@ -8,5 +8,34 @@ $media-md: $media-lg - 208;
 $media-sm: $media-md - 244;
 $media-xs: $media-sm - 448;
 
+$font-family: 'Museo';
+
+$font-h1: 40px;
+$body-font-size : 17pt;
+
+$font-size-14: 14pt;
+
+
+/******** don't remove or edit the below code *********/
+// this code to calculate the font size for head e.g: h1,h2,..
+/*****************************************************/
+@function generateFontSizeForHead( $font-h1:$font-h1 ){
+  $font-h2: $font-h1 - 5;
+  $font-h3: $font-h2 - 3 ;
+  $font-h4: $font-h3 - 3;
+  $font-h5: $font-h4 - 5;
+  $font-h6: $font-h5 - 3;
+  $font-head : (
+          'h1': $font-h1,
+          'h2' : $font-h2,
+          'h3' : $font-h3,
+          'h4' : $font-h4,
+          'h5' : $font-h5,
+          'h6' : $font-h6
+  );
+  @return $font-head;
+}
+
+$font-head : generateFontSizeForHead();
 
 
