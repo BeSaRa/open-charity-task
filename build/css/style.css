@@ -36,9 +36,18 @@ h1, h2, h3, h4, h5, h6 {
   color: #5fc0c3 !important;
 }
 
-.btn.reverse {
+.btn.reverse, .btn:hover {
   color: #ffffff !important;
   background-color: #5fc0c3;
+}
+
+.btn.reverse:hover {
+  background-color: #ffffff;
+  color: #5fc0c3 !important;
+}
+
+.btn.reverse:hover.with-border {
+  border-color: #5fc0c3;
 }
 
 @font-face {
@@ -86,6 +95,10 @@ body {
   font-size: 17pt;
 }
 
+a {
+  text-decoration: none;
+}
+
 .clear {
   clear: both;
 }
@@ -93,11 +106,51 @@ body {
 .container {
   margin: 0 auto;
   position: relative;
-  width: 100%;
+  width: 1200px;
   padding: 0 15px;
 }
 
+.container:before, .container li:before {
+  display: table;
+  content: " ";
+}
+
+.container:after, .container li:after {
+  clear: both;
+  display: table;
+  content: " ";
+}
+
 .section {
+  display: block;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.np-margin-auto {
+  margin: 0 auto;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.image-center > img {
+  margin: 0 auto;
   display: block;
 }
 
@@ -157,7 +210,6 @@ body.has-scroll #logo {
 }
 
 #primary-menu ul li a {
-  text-decoration: none;
   color: #ffffff;
   text-transform: uppercase;
   float: left;
@@ -189,14 +241,67 @@ body.has-scroll #logo {
   color: #ffffff;
 }
 
+/********* Events **************/
+#events {
+  padding: 30px 0 0;
+}
+
+#events .container > div {
+  width: 50%;
+  padding: 20px 0;
+  float: left;
+}
+
+#events h6 {
+  margin-right: 10px;
+  color: #5fc0c3;
+}
+
+#events .date {
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+#events .event-description {
+  font-size: 13pt;
+}
+
+/************ collaborate ********/
+#collaborate-list {
+  padding: 0;
+  margin: 0;
+  display: table;
+}
+
+#collaborate-list li {
+  list-style: none;
+  float: left;
+  width: 33.3333333333%;
+}
+
+#collaborate-list li .collaborate-title {
+  margin: 10px 0;
+}
+
+#collaborate-list li .collaborate-desc {
+  padding: 10px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+#collaborate-list li .btn {
+  margin-bottom: 30px;
+}
+
 /******** buttons *************/
 .btn {
   padding: 10px 20px;
   border: 1px solid #5fc0c3;
+  display: inline-block;
 }
 
-.btn.reverse {
-  border: 1px solid #ffffff;
+.btn.reverse, .btn:hover {
+  border: 1px solid transparent;
 }
 
 /*********** generic styles ********/

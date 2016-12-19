@@ -41,8 +41,15 @@ $bg-colors : (
 
 .btn {
   color: $blue !important;
-  &.reverse {
+  &.reverse , &:hover {
     color: $white !important;
     background-color: $blue;
+  }
+  &.reverse:hover {
+    background-color: $white;
+    color: $blue !important;
+    &.with-border {
+      border-color: $blue;
+    }
   }
 }
