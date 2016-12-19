@@ -47,6 +47,15 @@
          */
         self.init = function(){
             $(window).on('resize scroll',self.checkNav);
+
+            var membersList = $('#members-list');
+            if(membersList.length )
+                membersList.owlCarousel({
+                    loop:true,
+                    margin:10,
+                    nav:false,
+                    items:5
+                });
         };
     }
 

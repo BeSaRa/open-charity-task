@@ -3,11 +3,14 @@
 <head>
     <link rel="stylesheet" type="text/css" href="src/css/style.scss"/>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> Open Charity </title>
     <!-- normalize-css  -->
     <link rel="stylesheet" href="lib/normalize-css/normalize.css">
+
+    <link rel="stylesheet" href="lib/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="lib/owl.carousel/dist/assets/owl.theme.default.min.css">
     <!-- theme css -->
     <link rel="stylesheet" href="build/css/style.css">
 </head>
@@ -103,12 +106,30 @@
                 </ul>
             </div>
         </section><!--our-mission-->
-        <section id="our-members" class="section"></section><!--our-members-->
+        <section id="our-members" class="section">
+            <div class="container">
+                <hr>
+                <h1 class="text-center upper-case">Our Members</h1>
+                <ul id="members-list" class="owl-carousel owl-theme">
+                    <li><a href="#"><img src="build/images/member-1.png"></a></li>
+                    <li><a href="#"><img src="build/images/member-2.png"></a></li>
+                    <li><a href="#"><img src="build/images/member-3.png"></a></li>
+                    <li><a href="#"><img src="build/images/member-4.png"></a></li>
+                    <li><a href="#"><img src="build/images/member-5.png"></a></li>
+                    <li><a href="#"><img src="build/images/member-1.png"></a></li>
+                    <li><a href="#"><img src="build/images/member-2.png"></a></li>
+                    <li><a href="#"><img src="build/images/member-3.png"></a></li>
+                    <li><a href="#"><img src="build/images/member-4.png"></a></li>
+                    <li><a href="#"><img src="build/images/member-5.png"></a></li>
+                </ul>
+            </div>
+        </section><!--our-members-->
         <section id="blog" class="section"></section><!--blog-->
         <footer  id="footer"></footer><!--footer-->
     </div><!-- wrapper -->
     <!--script file -->
     <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/owl.carousel/dist/owl.carousel.min.js"></script>
     <script src="build/js/script.js"></script>
 </body>
 </html>

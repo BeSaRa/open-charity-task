@@ -100,6 +100,10 @@ a {
   text-decoration: none;
 }
 
+hr {
+  border: 1px solid #d9dadd;
+}
+
 .clear {
   clear: both;
 }
@@ -302,6 +306,11 @@ body.has-scroll #logo {
   padding: 10px;
 }
 
+#collaborate-list li .collaborate-image {
+  width: 230px;
+  margin: 0 auto;
+}
+
 #collaborate-list li .btn {
   margin-bottom: 30px;
 }
@@ -345,6 +354,11 @@ body.has-scroll #logo {
 #our-mission #missions-list .mission > .mission-title {
   margin: 10px 0 0;
   color: #5fc0c3;
+}
+
+/********* members-list *******/
+#members-list {
+  list-style: none;
 }
 
 /******** buttons *************/
