@@ -1,0 +1,47 @@
+@import "variabls";
+
+
+
+@mixin boxing-size($style : $boxing-style){
+  -webkit-box-sizing: $style;
+  -moz-box-sizing: $style;
+  box-sizing: $style;
+  @content;
+}
+
+
+@mixin generateColumn($size , $index , $width ){
+  .col-#{$size}-#{$index} {
+    width : ((100 / $grid-column-count ) * $index ) * 1%;
+  }
+}
+
+@mixin generateMedia($point){
+  $width : nth($point,1);
+  $size  : nth($point,2);
+
+
+
+  @media (min-width: #{$width}) {
+    .container {
+      width: $width - $padding ;
+    }
+    .row {
+      margin-right: - $padding / 2;
+      margin-left: - $padding / 2;
+    }
+    @for $i from 1 through $grid-column-count {
+        @include generateColumn( $size , $i , $width );
+    }
+  }
+
+
+
+}
+
+// $breakpoints : $media-lg lg ,  $media-md md, $media-sm sm , $media-xs sx;
+@mixin  generateBreakPoints( $points ){
+  @each $point in $points  {
+    @include generateMedia($point);
+  }
+}

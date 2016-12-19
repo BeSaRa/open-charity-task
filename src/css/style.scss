@@ -1,4 +1,80 @@
 @import "theme";
-body {
-  background-color: $color;
+@import "mixins";
+* {
+  @include boxing-size;
+}
+.clear {
+  clear: both;
+}
+.container {
+  margin: 0 auto;
+  position: relative;
+  width:100%;
+  padding:0 15px;
+}
+/**************** header ********/
+#header {
+  padding:15px 0;
+  height:96px;
+  position: relative;
+  z-index:2;
+}
+.responsive-image {
+  max-width: 100%;
+}
+#logo {
+  float: left;
+}
+#primary-menu {
+  float: right;
+  ul {
+    padding:0;
+    float: left;
+    margin: 15px 0 0;
+    li {
+      float: left;
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: $gray;
+        text-transform: uppercase;
+        float: left;
+        padding:10px 15px;
+        &.btn {
+          margin-top:-1px;
+        }
+      }
+    }
+  }
+}
+
+/*********** slider **************/
+#slider {
+  height:100vh;
+  background: url("../images/slide-image.png") no-repeat scroll center 96px;
+  background-size:cover;
+  margin-top:-96px;
+  .slider-content {
+    clear: both;
+    text-align: center;
+    width:60%;
+    margin: 200px auto;
+    * {
+       color: $white;
+     }
+  }
+  width:100%;
+  float: left;
+}
+
+/******** buttons *************/
+.btn {
+  padding:10px 20px;
+  border:1px solid $blue;
+  color: $blue !important;
+  &.reverse {
+    border:1px solid $white;
+    color: $white !important;
+    background-color: $blue;
+  }
 }

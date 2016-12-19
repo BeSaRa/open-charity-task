@@ -1,0 +1,12 @@
+$grid-column-count: 12; // count grid columns
+$padding: 20px; // padding between columns divided by / 2 for left and eight
+$margin : 20px; // margin between columns divided by / 2 for left and eight
+$boxing-style: border-box; // boxing-size style
+
+$media-lg: 1200px;
+$media-md: $media-lg - 208;
+$media-sm: $media-md - 244;
+$media-xs: $media-sm - 448;
+
+
+

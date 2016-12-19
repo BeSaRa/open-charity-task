@@ -1,0 +1,8 @@
+@import "variabls";
+@import "mixins";
+
+
+// create the grid with media query
+$breakpoints :  $media-xs sx,$media-sm sm,$media-md md,$media-lg lg;
+
+@include generateBreakPoints($breakpoints);

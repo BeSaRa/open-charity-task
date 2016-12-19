@@ -1,1 +1,40 @@
-$color: #EEE;
+@import "mixins";
+
+$gray: #565659;
+$gray-light: #5a6175;
+$blue: #5fc0c3;
+$blue-light: #57c0d5;
+$white: #ffffff;
+$white-dark : #f1f2f5;
+// body
+body {
+  background-color: $white-dark;
+}
+// h tags color
+%gray-color {
+  color: $gray;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    @extend %gray-color;
+  }
+}
+
+$bg-colors : (
+  'gray': $gray,
+  'gray-light': $gray-light ,
+  'blue': $blue,
+  'blue-light': $blue-light,
+  'white': $white,
+  'white-dark' : $white-dark
+);
+
+@each $color in $bg-colors {
+  $bg : nth($color,1);
+  $color :nth($color,2);
+
+  .#{$bg}-bg {
+    background-color: $color;
+  }
+}

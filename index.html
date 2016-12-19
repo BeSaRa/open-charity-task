@@ -5,11 +5,45 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> Open Charity </title>
+    <!-- normalize-css  -->
+    <link rel="stylesheet" href="lib/normalize-css/normalize.css">
+    <!-- theme css -->
     <link rel="stylesheet" href="build/css/style.css">
 </head>
 <body>
-
+    <div id="wrapper">
+        <header  id="header" class="white-bg">
+            <div class="container">
+                <div id="logo">
+                    <a href="#"><img class="responsive-image" src="build/images/open-charity-logo.png" alt="log image" /></a>
+                </div>
+                <nav id="primary-menu">
+                    <ul>
+                        <li><a href="#">About Open Charity</a></li>
+                        <li><a href="#">The Blog</a></li>
+                        <li><a class="btn" href="#">Join Us</a></li>
+                    </ul>
+                </nav>
+                <div class="clear"></div>
+            </div>
+        </header><!-- header-->
+        <section id="slider" class="gray-bg">
+            <div class="slider-content">
+                <h1>Sharing Ideas For Charities</h1>
+                <h3>Many charities’ goals are similar, as is the functionality we require, but little shared working takes place.</h3>
+                <h3>By working together, driving shared areas of interest and influencing open source developments we can bring efficiencies, improve the digital experience for our users, and have great impact.</h3>
+                <h3>Together we can make a bigger difference.</h3>
+            </div>
+        </section><!--slider-->
+        <section id="events"></section><!--events-->
+        <section id="collaborate"></section><!--collaborate-->
+        <section id="our-mission"></section><!--our-mission-->
+        <section id="our-members"></section><!--our-members-->
+        <section id="blog"></section><!--blog-->
+        <footer  id="footer"></footer><!--footer-->
+    </div><!-- wrapper -->
     <!--script file -->
+    <script src="lib/jquery/dist/jquery.min.js"></script>
     <script src="build/js/script.js"></script>
 </body>
 </html>

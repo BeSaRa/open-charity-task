@@ -1,5 +1,127 @@
 body {
-  background-color: #EEE;
+  background-color: #f1f2f5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #565659;
+}
+
+.gray-bg {
+  background-color: #565659;
+}
+
+.gray-light-bg {
+  background-color: #5a6175;
+}
+
+.blue-bg {
+  background-color: #5fc0c3;
+}
+
+.blue-light-bg {
+  background-color: #57c0d5;
+}
+
+.white-bg {
+  background-color: #ffffff;
+}
+
+.white-dark-bg {
+  background-color: #f1f2f5;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clear {
+  clear: both;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  padding: 0 15px;
+}
+
+/**************** header ********/
+#header {
+  padding: 15px 0;
+  height: 96px;
+  position: relative;
+  z-index: 2;
+}
+
+.responsive-image {
+  max-width: 100%;
+}
+
+#logo {
+  float: left;
+}
+
+#primary-menu {
+  float: right;
+}
+
+#primary-menu ul {
+  padding: 0;
+  float: left;
+  margin: 15px 0 0;
+}
+
+#primary-menu ul li {
+  float: left;
+  list-style: none;
+}
+
+#primary-menu ul li a {
+  text-decoration: none;
+  color: #565659;
+  text-transform: uppercase;
+  float: left;
+  padding: 10px 15px;
+}
+
+#primary-menu ul li a.btn {
+  margin-top: -1px;
+}
+
+/*********** slider **************/
+#slider {
+  height: 100vh;
+  background: url("../images/slide-image.png") no-repeat scroll center 96px;
+  background-size: cover;
+  margin-top: -96px;
+  width: 100%;
+  float: left;
+}
+
+#slider .slider-content {
+  clear: both;
+  text-align: center;
+  width: 60%;
+  margin: 200px auto;
+}
+
+#slider .slider-content * {
+  color: #ffffff;
+}
+
+/******** buttons *************/
+.btn {
+  padding: 10px 20px;
+  border: 1px solid #5fc0c3;
+  color: #5fc0c3 !important;
+}
+
+.btn.reverse {
+  border: 1px solid #ffffff;
+  color: #ffffff !important;
+  background-color: #5fc0c3;
 }
 
 /*# sourceMappingURL=style.css.map */
