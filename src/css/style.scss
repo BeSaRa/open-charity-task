@@ -9,6 +9,7 @@
 body {
   font-family: $font-family;
   font-size:$body-font-size;
+  color: $gray-light;
 }
 a {
   text-decoration: none;
@@ -58,12 +59,22 @@ a {
     display: block;
   }
 }
+.small-text {
+  font-size: 18px;
+  line-height:1.5;
+}
+.bold-text {
+  font-weight: bold;
+}
 /**************** body with some helper class *********/
 body.has-scroll {
   #header {
     background-color: $white !important;
     height:70px;
     padding:0;
+    -webkit-box-shadow: 0px -5px 20px rgba(0,0,0,.5);
+    -moz-box-shadow: 0px -5px 20px rgba(0,0,0,.5);
+    box-shadow: 0px -5px 20px rgba(0,0,0,.5);
   }
   #primary-menu {
     a {
@@ -159,6 +170,7 @@ body.has-scroll {
 }
 
 /************ collaborate ********/
+
 #collaborate-list {
   padding:0;
   margin:0;
@@ -172,16 +184,49 @@ body.has-scroll {
     }
     .collaborate-desc {
       padding:10px;
-      font-size: 18px;
-      line-height:1.5;
-    }
-    .collaborate-image {
-
+      @extend .small-text;
     }
     .btn {
       margin-bottom: 30px;
     }
   }
+}
+/********* our mission *********/
+#our-mission {
+  p:first-of-type {
+    color: #55565c;
+  }
+  #missions-list {
+    list-style: none;
+    & > li {
+      width: 100/3 *1%;
+      float: left;
+      padding: 10px;
+    }
+    .mission {
+      background-color: $white;
+      @include border-radius(8px);
+      padding: $padding;
+      margin-bottom:$padding;
+      margin-top:50px;
+      //position: relative;
+      @extend .image-center;
+
+      & > .mission-icon {
+        background-color: $blue;
+        @include border-radius(100%);
+        border:10px solid $white;
+        width:120px;
+        height:120px;
+        margin-top:-70px;
+      }
+      & > .mission-title {
+        margin:10px 0 0;
+        color: $blue;
+      }
+    }
+  }
+
 }
 /******** buttons *************/
 .btn {

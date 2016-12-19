@@ -58,5 +58,12 @@
 
 @mixin transition($value){
   -webkit-transition: $value;
+  -moz-transition: $value;
   transition: $value;
+}
+
+@mixin border-radius($value){
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  border-radius: $value;
 }

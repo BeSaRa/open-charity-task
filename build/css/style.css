@@ -93,6 +93,7 @@ h6, .h6 {
 body {
   font-family: "Museo";
   font-size: 17pt;
+  color: #5a6175;
 }
 
 a {
@@ -149,9 +150,18 @@ a {
   text-align: center;
 }
 
-.image-center > img {
+.image-center > img, #our-mission #missions-list .mission > img {
   margin: 0 auto;
   display: block;
+}
+
+.small-text, #collaborate-list li .collaborate-desc {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.bold-text {
+  font-weight: bold;
 }
 
 /**************** body with some helper class *********/
@@ -159,6 +169,9 @@ body.has-scroll #header {
   background-color: #ffffff !important;
   height: 70px;
   padding: 0;
+  -webkit-box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.5);
 }
 
 body.has-scroll #primary-menu a {
@@ -178,6 +191,7 @@ body.has-scroll #logo {
   z-index: 2;
   width: 100%;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
@@ -190,6 +204,7 @@ body.has-scroll #logo {
   float: left;
   max-width: 300px;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
@@ -285,12 +300,51 @@ body.has-scroll #logo {
 
 #collaborate-list li .collaborate-desc {
   padding: 10px;
-  font-size: 18px;
-  line-height: 1.5;
 }
 
 #collaborate-list li .btn {
   margin-bottom: 30px;
+}
+
+/********* our mission *********/
+#our-mission p:first-of-type {
+  color: #55565c;
+}
+
+#our-mission #missions-list {
+  list-style: none;
+}
+
+#our-mission #missions-list > li {
+  width: 33.3333333333%;
+  float: left;
+  padding: 10px;
+}
+
+#our-mission #missions-list .mission {
+  background-color: #ffffff;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+#our-mission #missions-list .mission > .mission-icon {
+  background-color: #5fc0c3;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  border: 10px solid #ffffff;
+  width: 120px;
+  height: 120px;
+  margin-top: -70px;
+}
+
+#our-mission #missions-list .mission > .mission-title {
+  margin: 10px 0 0;
+  color: #5fc0c3;
 }
 
 /******** buttons *************/
