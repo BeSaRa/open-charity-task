@@ -391,6 +391,48 @@ body.has-scroll #logo {
   font-size: 14px;
 }
 
+#blog-list .owl-nav {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+}
+
+#blog-list .owl-nav > div {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 0;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #5fc0c3;
+}
+
+#blog-list .owl-nav > div:hover {
+  color: #57c0d5;
+}
+
+#blog-list .owl-nav .owl-prev {
+  float: left;
+  margin-left: -30px;
+  background-color: transparent;
+}
+
+#blog-list .owl-nav .owl-prev:before {
+  content: "\f053";
+  font-size: 15px;
+}
+
+#blog-list .owl-nav .owl-next {
+  float: right;
+  margin-right: -30px;
+  background-color: transparent;
+}
+
+#blog-list .owl-nav .owl-next:before {
+  content: "\f054";
+  font-size: 15px;
+}
+
 /******** buttons *************/
 .btn {
   padding: 10px 20px;

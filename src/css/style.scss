@@ -266,6 +266,41 @@ body.has-scroll {
       font-size:14px;
     }
   }
+  .owl-nav {
+    position: absolute;
+    top:40%;
+    width:100%;
+    & > div {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: 0;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: $blue;
+      &:hover {
+        color: $blue-light;
+      }
+    }
+    .owl-prev {
+      float: left;
+      margin-left: -30px;
+      background-color: transparent;
+      &:before {
+        content: "\f053"; // prev icon
+        font-size:15px;
+      }
+    }
+    .owl-next {
+      float: right;
+      margin-right: -30px;
+      background-color: transparent;
+      &:before {
+        content: "\f054"; // next icon
+        font-size:15px;
+      }
+    }
+  }
 }
 /******** buttons *************/
 .btn {
