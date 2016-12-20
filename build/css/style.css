@@ -101,7 +101,8 @@ a {
 }
 
 hr {
-  border: 1px solid #d9dadd;
+  border: none;
+  border-bottom: 1px solid #d9dadd;
 }
 
 .clear {
@@ -159,7 +160,7 @@ hr {
   display: block;
 }
 
-.small-text, #collaborate-list li .collaborate-desc {
+.small-text, #collaborate-list li .collaborate-desc, #blog-list li .post-excerpt, #blog-list li .post-date {
   font-size: 18px;
   line-height: 1.5;
 }
@@ -322,6 +323,7 @@ body.has-scroll #logo {
 
 #our-mission #missions-list {
   list-style: none;
+  padding: 0;
 }
 
 #our-mission #missions-list > li {
@@ -359,6 +361,34 @@ body.has-scroll #logo {
 /********* members-list *******/
 #members-list {
   list-style: none;
+  padding: 0;
+}
+
+/******** blog-list *******/
+#blog-list {
+  padding: 0;
+}
+
+#blog-list li {
+  margin: 0;
+  float: left;
+  list-style: none;
+}
+
+#blog-list li > div {
+  margin: 20px 10px;
+}
+
+#blog-list li a {
+  color: #5fc0c3;
+}
+
+#blog-list li h6 {
+  margin: 10px;
+}
+
+#blog-list li .post-date {
+  font-size: 14px;
 }
 
 /******** buttons *************/

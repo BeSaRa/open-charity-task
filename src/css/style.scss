@@ -15,7 +15,8 @@ a {
   text-decoration: none;
 }
 hr {
-  border: 1px solid $hr-color;
+  border: none;
+  border-bottom: 1px solid $hr-color;
 }
 .clear {
   clear: both;
@@ -205,6 +206,7 @@ body.has-scroll {
   }
   #missions-list {
     list-style: none;
+    padding:0;
     & > li {
       width: 100/3 *1%;
       float: left;
@@ -238,6 +240,32 @@ body.has-scroll {
 /********* members-list *******/
 #members-list {
   list-style: none;
+  padding:0;
+}
+/******** blog-list *******/
+#blog-list {
+  padding:0;
+  li {
+    margin:0;
+    float: left;
+    list-style: none;
+    & > div {
+      margin:20px 10px;
+    }
+    a {
+      color: $blue;
+    }
+    h6 {
+      margin:10px;
+    }
+    .post-excerpt {
+      @extend .small-text;
+    }
+    .post-date {
+      @extend .small-text;
+      font-size:14px;
+    }
+  }
 }
 /******** buttons *************/
 .btn {
