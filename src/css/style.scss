@@ -6,114 +6,174 @@
 * {
   @include boxing-size;
 }
+
 body {
   font-family: $font-family;
-  font-size:$body-font-size;
+  font-size: $body-font-size;
   color: $gray-light;
 }
+
 a {
   text-decoration: none;
 }
+
 hr {
   border: none;
   border-bottom: 1px solid $hr-color;
 }
+
 .clear {
   clear: both;
 }
+
 .container {
   margin: 0 auto;
   position: relative;
-  width:1200px;
-  padding:0 15px;
-  &:before , li:before {
+  width: 1200px;
+  padding: 0 15px;
+  &:before, li:before {
     display: table;
     content: " ";
   }
-  &:after , li:after {
+  &:after, li:after {
     clear: both;
     display: table;
     content: " ";
   }
 }
+
 .section {
   display: block;
 }
+
 .no-margin {
-  margin:0;
+  margin: 0;
 }
+
 .np-margin-auto {
-  margin:0 auto;
+  margin: 0 auto;
 }
+
 .no-padding {
-  padding: 0 ;
+  padding: 0;
 }
+
 .float-left {
   float: left;
 }
+
 .float-right {
-  float:right;
+  float: right;
 }
+
 .text-center {
   text-align: center;
 }
+
 .image-center {
   & > img {
     margin: 0 auto;
     display: block;
   }
 }
+
 .small-text {
   font-size: 18px;
-  line-height:1.5;
+  line-height: 1.5;
 }
+
 .bold-text {
   font-weight: bold;
 }
+
 /**************** body with some helper class *********/
-body.has-scroll {
-  #header {
-    background-color: $white !important;
-    height:70px;
-    padding:0;
-    -webkit-box-shadow: 0px -5px 20px rgba(0,0,0,.5);
-    -moz-box-shadow: 0px -5px 20px rgba(0,0,0,.5);
-    box-shadow: 0px -5px 20px rgba(0,0,0,.5);
+body {
+  #slide-menu  {
+    display: none;
   }
-  #primary-menu {
-    a {
-      color: $gray;
+  &.size-menu {
+    #burger-menu {
+      display: block;
+    }
+    #slide-menu  {
+      display: block;
+    }
+    #primary-menu {
+      display: none;
+    }
+
+  }
+
+  &.opened-menu {
+    #slide-menu {
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      transform: translateX(0);
+    }
+    &  #burger-menu  > i:before {
+      content: "\f00d";
     }
   }
-  #logo {
-    max-width:200px;
-    margin-top: 13px;
+  &.has-scroll {
+    #header {
+      background-color: $white !important;
+      height: 70px;
+      padding: 0;
+      -webkit-box-shadow: 0px -5px 20px rgba(0, 0, 0, .5);
+      -moz-box-shadow: 0px -5px 20px rgba(0, 0, 0, .5);
+      box-shadow: 0px -5px 20px rgba(0, 0, 0, .5);
+
+    }
+    #primary-menu {
+      a {
+        color: $gray;
+      }
+    }
+    #burger-menu {
+      color: $gray;
+    }
+    #logo {
+      max-width: 200px;
+      margin-top: 13px;
+    }
   }
+
 }
 
 /**************** header ********/
 #header {
-  padding:15px 0;
-  height:96px;
+  padding: 15px 0;
+  height: 96px;
   position: fixed;
-  z-index:2;
-  width:100%;
+  z-index: 2;
+  width: 100%;
   @include transition(all .2s ease-in-out);
 }
+
+#burger-menu {
+  color: $blue;
+  float: right;
+  margin-top: 15px;
+  font-size: 40px;
+  display: none;
+}
+
 .responsive-image {
   max-width: 100%;
   height: auto;
 }
+
 #logo {
   float: left;
   max-width: 300px;
   @include transition(all .2s ease-in-out);
 }
+
 #primary-menu {
   float: right;
-  font-size:$font-size-14;
+  font-size: $font-size-14;
   ul {
-    padding:0;
+    padding: 0;
     float: left;
     margin: 15px 0 0;
     li {
@@ -123,9 +183,9 @@ body.has-scroll {
         color: $white;
         text-transform: uppercase;
         float: left;
-        padding:10px 15px;
+        padding: 10px 15px;
         &.btn {
-          margin-top:-1px;
+          margin-top: -1px;
         }
       }
     }
@@ -134,34 +194,35 @@ body.has-scroll {
 
 /*********** slider **************/
 #slider {
-  height:100vh;
+  height: 100vh;
   background: url("../images/slide-image.png") no-repeat scroll center top;
-  background-size:cover;
+  background-size: cover;
   .slider-content {
     clear: both;
     text-align: center;
-    width:60%;
+    width: 60%;
     margin: 200px auto;
-    line-height:1.4;
+    line-height: 1.4;
     * {
-       color: $white;
-     }
+      color: $white;
+    }
   }
-  width:100%;
+  width: 100%;
   overflow: hidden;
 }
+
 /********* Events **************/
 #events {
   padding: 30px 0 0;
   .container {
     & > div {
-      width:50%;
-      padding:$padding 0;
+      width: 50%;
+      padding: $padding 0;
       float: left;
     }
   }
   h6 {
-    margin-right:10px;
+    margin-right: 10px;
     color: $blue;
   }
   .date {
@@ -169,36 +230,37 @@ body.has-scroll {
     font-weight: bold;
   }
   .event-description {
-    font-size:$body-font-size - 4;
+    font-size: $body-font-size - 4;
   }
 }
 
 /************ collaborate ********/
 
 #collaborate-list {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
   display: table;
   li {
-   list-style: none;
+    list-style: none;
     float: left;
-    width:100/3 * 1%;
+    width: 100/3 * 1%;
     .collaborate-title {
-      margin:10px 0;
+      margin: 10px 0;
     }
     .collaborate-desc {
-      padding:10px;
+      padding: 10px;
       @extend .small-text;
     }
     .collaborate-image {
-      width:230px;
-      margin:0 auto;
+      width: 230px;
+      margin: 0 auto;
     }
     .btn {
       margin-bottom: 30px;
     }
   }
 }
+
 /********* our mission *********/
 #our-mission {
   p:first-of-type {
@@ -206,7 +268,7 @@ body.has-scroll {
   }
   #missions-list {
     list-style: none;
-    padding:0;
+    padding: 0;
     & > li {
       width: 100/3 *1%;
       float: left;
@@ -216,60 +278,62 @@ body.has-scroll {
       background-color: $white;
       @include border-radius(8px);
       padding: $padding;
-      margin-bottom:$padding;
-      margin-top:50px;
+      margin-bottom: $padding;
+      margin-top: 50px;
       //position: relative;
       @extend .image-center;
 
       & > .mission-icon {
         background-color: $blue;
         @include border-radius(100%);
-        border:10px solid $white;
-        width:120px;
-        height:120px;
-        margin-top:-70px;
+        border: 10px solid $white;
+        width: 120px;
+        height: 120px;
+        margin-top: -70px;
       }
       & > .mission-title {
-        margin:10px 0 0;
+        margin: 10px 0 0;
         color: $blue;
       }
     }
   }
 
 }
+
 /********* members-list *******/
 #members-list {
   list-style: none;
-  padding:0;
+  padding: 0;
 }
+
 /******** blog-list *******/
 #blog-list {
-  padding:0;
+  padding: 0;
   li {
-    margin:0;
+    margin: 0;
     float: left;
     list-style: none;
     & > div {
-      margin:20px 10px;
+      margin: 20px 10px;
     }
     a {
       color: $blue;
     }
     h6 {
-      margin:10px;
+      margin: 10px;
     }
     .post-excerpt {
       @extend .small-text;
     }
     .post-date {
       @extend .small-text;
-      font-size:14px;
+      font-size: 14px;
     }
   }
   .owl-nav {
     position: absolute;
-    top:40%;
-    width:100%;
+    top: 40%;
+    width: 100%;
     & > div {
       display: inline-block;
       font: normal normal normal 14px/1 FontAwesome;
@@ -288,7 +352,7 @@ body.has-scroll {
       background-color: transparent;
       &:before {
         content: "\f053"; // prev icon
-        font-size:15px;
+        font-size: 15px;
       }
     }
     .owl-next {
@@ -297,52 +361,186 @@ body.has-scroll {
       background-color: transparent;
       &:before {
         content: "\f054"; // next icon
-        font-size:15px;
+        font-size: 15px;
       }
     }
   }
 }
+
 /********* footer **********/
 #footer {
-  color: lighten($footer-bg,40%);
+  color: lighten($footer-bg, 40%);
   a {
     color: $blue;
     &:hover {
-      color: lighten($blue , 50%);
+      color: lighten($blue, 50%);
     }
 
   }
   hr {
-    border-color: lighten($footer-bg,15%);
+    border-color: lighten($footer-bg, 15%);
   }
-#social-media-footer {
-  list-style:none;
-  padding:20px 0;
-  margin:0 auto;
-  display: table;
-  li {
-    display: inline-block;
-    padding:10px;
+  #social-media-footer {
+    list-style: none;
+    padding: 20px 0;
+    margin: 0 auto;
+    display: table;
+    li {
+      display: inline-block;
+      padding: 10px;
+    }
   }
 }
-}
+
 /******** buttons *************/
 .btn {
-  padding:10px 20px;
-  border:1px solid $blue;
+  padding: 10px 20px;
+  border: 1px solid $blue;
   display: inline-block;
-  &.reverse , &:hover {
-    border:1px solid transparent;
+  &.reverse, &:hover {
+    border: 1px solid transparent;
   }
+}
+
+li.btn {
+  padding: 0;
 }
 
 /*********** generic styles ********/
 .upper-case {
   text-transform: uppercase !important;
 }
+
 .capital-case {
   text-transform: capitalize !important;
 }
+
 .lower-case {
   text-transform: lowercase !important;
+}
+
+/********* slide-menu *******/
+#slide-menu {
+  width: 230px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  background-color: $blue;
+  -webkit-box-shadow: 0px -5px 20px rgba(0, 0, 0, .5);
+  -moz-box-shadow: 0px -5px 20px rgba(0, 0, 0, .5);
+  box-shadow: 0px -5px 20px rgba(0, 0, 0, .5);
+  @include transition(all .2s ease-in-out);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  transform: translateX(-100%);
+  .close-sidebar {
+    float: right;
+    color: $white;
+    margin:6px 10px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    li {
+      padding: 10px;
+      display: block;
+      &:not(:last-child) {
+        border-bottom: 1px solid lighten($blue-light,10%);
+      }
+      &.btn {
+        padding: 10px !important;
+        border: none;
+      }
+      a {
+        color: $white;
+        display: block;
+      }
+    }
+  }
+}
+
+/*********** media query *******/
+
+@media (max-width: $media-sm) {
+  #header {
+    height: 70px;
+    padding: 0;
+  }
+  #logo {
+    max-width: 200px;
+    margin-top: 13px;
+  }
+  .container {
+    width: 100% !important;
+  }
+  #collaborate-list, #missions-list {
+    & > li {
+      width: 100% !important;
+    }
+  }
+  .left-event {
+    padding-bottom: 0 !important;
+  }
+  .right-event {
+    text-align: center;
+    .btn {
+      float: none;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  .left-event, .right-event {
+    width: 100% !important;
+
+  }
+  .slider-content {
+    margin: 100px auto 0 !important;
+    h1 {
+      font-size: 30px;
+    }
+    font-size: 15px;
+  }
+}
+
+@media (min-width: $media-sm) and (max-width: $media-md + 46) {
+  #header {
+    height: 70px;
+    padding: 0;
+  }
+  #logo {
+    max-width: 200px;
+    margin-top: 13px;
+  }
+  .container {
+    width: $media-sm;
+  }
+  #collaborate-list, #missions-list {
+    & > li {
+      width: 100% !important;
+    }
+  }
+  .slider-content {
+    h1 {
+      font-size: 30px;
+    }
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $media-md + 46) and (max-width: $media-lg + 60) {
+  #header {
+    height: 70px;
+    padding: 0;
+  }
+  #logo {
+    max-width: 200px;
+    margin-top: 13px;
+  }
+  .container {
+    width: $media-md;
+  }
 }

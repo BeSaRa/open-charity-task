@@ -1,15 +1,18 @@
-@import "mixins";
-@import "theme";
-@media all and (-ms-high-contrast:none) {
-  @include IE11(#header){
-    top:0;
-    background-color: $white;
-  }
-  @include IE11(#header  #primary-menu  a ){
-    color: $gray;
-
-  }
-  @include IE11(#slider){
-    margin-top:96px;
-  }
-}
+//@import "mixins";
+//@import "theme";
+//@media all and (-ms-high-contrast:none) {
+//  @include IE11(#header){
+//    top:0;
+//    background-color: $white;
+//    -webkit-box-shadow: 0px -5px 20px rgba(0,0,0,.5);
+//    -moz-box-shadow: 0px -5px 20px rgba(0,0,0,.5);
+//    box-shadow: 0px -5px 20px rgba(0,0,0,.5);
+//  }
+//  @include IE11(#header  #primary-menu  a ){
+//    color: $gray;
+//
+//  }
+//  @include IE11(#slider){
+//    margin-top:96px;
+//  }
+//}

@@ -1,6 +1,5 @@
 @import "variabls";
 
-
 @mixin generateHFontSize($font-head:$font-head) {
   @each $item in $font-head {
     $h : nth($item,1);

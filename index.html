@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="src/css/style.scss"/>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,11">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title> Open Charity </title>
     <!-- normalize-css  -->
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
     <!-- theme css -->
     <link rel="stylesheet" href="build/css/style.css">
-    <!-- ie 11-->
+    <!-- this styleSheet for ie 11 -->
     <link rel="stylesheet" href="build/css/ie-11-only.css" />
 
 </head>
@@ -24,11 +24,12 @@
                 <div id="logo">
                     <a href="#"><img class="responsive-image" src="build/images/open-charity-logo.png" alt="log image" /></a>
                 </div>
+                <a id="burger-menu" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
                 <nav id="primary-menu">
                     <ul>
                         <li><a href="#">About Open Charity</a></li>
                         <li><a href="#">The Blog</a></li>
-                        <li><a class="btn" href="#">Join Us</a></li>
+                        <li class="btn" ><a href="#">Join Us</a></li>
                     </ul>
                 </nav>
                 <div class="clear"></div>
@@ -256,5 +257,8 @@
     <script src="lib/jquery/dist/jquery.min.js"></script>
     <script src="lib/owl.carousel/dist/owl.carousel.min.js"></script>
     <script src="build/js/script.js"></script>
+    <div id="slide-menu">
+        <a class="close-sidebar" href="#"><i class="fa fa-times"></i></a>
+    </div>
 </body>
 </html>
