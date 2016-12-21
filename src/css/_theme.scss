@@ -7,6 +7,8 @@ $blue-light: #57c0d5;
 $white: #ffffff;
 $white-dark : #f1f2f5;
 $hr-color: #d9dadd;
+$footer-bg :#454850;
+
 // body
 body {
   background-color: $white-dark;
@@ -28,7 +30,8 @@ $bg-colors : (
   'blue': $blue,
   'blue-light': $blue-light,
   'white': $white,
-  'white-dark' : $white-dark
+  'white-dark' : $white-dark ,
+  'footer-bg' : $footer-bg
 );
 
 @each $color in $bg-colors {

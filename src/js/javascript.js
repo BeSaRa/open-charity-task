@@ -33,7 +33,8 @@
                     nav:true,
                     items:4 ,
                     dots:false ,
-                    autoplay:true
+                    autoplay:true,
+                    slideBy:'page'
                 });
         };
         /**

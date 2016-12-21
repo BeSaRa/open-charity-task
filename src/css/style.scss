@@ -302,6 +302,30 @@ body.has-scroll {
     }
   }
 }
+/********* footer **********/
+#footer {
+  color: lighten($footer-bg,40%);
+  a {
+    color: $blue;
+    &:hover {
+      color: lighten($blue , 50%);
+    }
+
+  }
+  hr {
+    border-color: lighten($footer-bg,15%);
+  }
+#social-media-footer {
+  list-style:none;
+  padding:20px 0;
+  margin:0 auto;
+  display: table;
+  li {
+    display: inline-block;
+    padding:10px;
+  }
+}
+}
 /******** buttons *************/
 .btn {
   padding:10px 20px;

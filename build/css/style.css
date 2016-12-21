@@ -32,6 +32,10 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f1f2f5;
 }
 
+.footer-bg-bg {
+  background-color: #454850;
+}
+
 .btn {
   color: #5fc0c3 !important;
 }
@@ -431,6 +435,35 @@ body.has-scroll #logo {
 #blog-list .owl-nav .owl-next:before {
   content: "\f054";
   font-size: 15px;
+}
+
+/********* footer **********/
+#footer {
+  color: #abaeb6;
+}
+
+#footer a {
+  color: #5fc0c3;
+}
+
+#footer a:hover {
+  color: white;
+}
+
+#footer hr {
+  border-color: #686d79;
+}
+
+#footer #social-media-footer {
+  list-style: none;
+  padding: 20px 0;
+  margin: 0 auto;
+  display: table;
+}
+
+#footer #social-media-footer li {
+  display: inline-block;
+  padding: 10px;
 }
 
 /******** buttons *************/
