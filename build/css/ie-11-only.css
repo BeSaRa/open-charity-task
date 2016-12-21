@@ -1,0 +1,72 @@
+/******** don't remove or edit the below code *********/
+/*****************************************************/
+/******** don't remove or edit the below code *********/
+/*****************************************************/
+body {
+  background-color: #f1f2f5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #565659;
+}
+
+.gray-bg {
+  background-color: #565659;
+}
+
+.gray-light-bg {
+  background-color: #5a6175;
+}
+
+.blue-bg {
+  background-color: #5fc0c3;
+}
+
+.blue-light-bg {
+  background-color: #57c0d5;
+}
+
+.white-bg {
+  background-color: #ffffff;
+}
+
+.white-dark-bg {
+  background-color: #f1f2f5;
+}
+
+.footer-bg-bg {
+  background-color: #454850;
+}
+
+.btn {
+  color: #5fc0c3 !important;
+}
+
+.btn.reverse, .btn:hover {
+  color: #ffffff !important;
+  background-color: #5fc0c3;
+}
+
+.btn.reverse:hover {
+  background-color: #ffffff;
+  color: #5fc0c3 !important;
+}
+
+.btn.reverse:hover.with-border {
+  border-color: #5fc0c3;
+}
+
+@media all and (-ms-high-contrast: none) {
+  *::-ms-backdrop, #header {
+    top: 0;
+    background-color: #ffffff;
+  }
+  *::-ms-backdrop, #header #primary-menu a {
+    color: #565659;
+  }
+  *::-ms-backdrop, #slider {
+    margin-top: 96px;
+  }
+}
+
+/*# sourceMappingURL=ie-11-only.css.map */

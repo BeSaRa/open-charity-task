@@ -1,0 +1,15 @@
+@import "mixins";
+@import "theme";
+@media all and (-ms-high-contrast:none) {
+  @include IE11(#header){
+    top:0;
+    background-color: $white;
+  }
+  @include IE11(#header  #primary-menu  a ){
+    color: $gray;
+
+  }
+  @include IE11(#slider){
+    margin-top:96px;
+  }
+}

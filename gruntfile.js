@@ -24,7 +24,8 @@ module.exports = function (grunt) {
                     outputStyle:'expanded'
                 },
                 files: {
-                    'build/css/style.css': 'src/css/style.scss'
+                    'build/css/style.css': 'src/css/style.scss',
+                    'build/css/ie-11-only.css': 'src/css/ie-11-only.scss'
                 }
             }
         },

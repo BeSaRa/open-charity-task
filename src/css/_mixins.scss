@@ -67,3 +67,9 @@
   -moz-border-radius: $value;
   border-radius: $value;
 }
+
+@mixin IE11($element){
+  *::-ms-backdrop , #{$element} {
+    @content;
+  }
+}
